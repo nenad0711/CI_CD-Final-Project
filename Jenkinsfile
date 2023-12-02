@@ -25,7 +25,18 @@ pipeline{
                          }
           stage('Build Docker Image'){
                 steps{
-                      bat 'docker build -f Dockerfile -t final-project .'
+                node {
+                    checkout scm
+
+                    docker.withRegistry('https://registry.hub.docker.com', 'nenad0711') {
+
+                        def customImage = docker.build("nenad0711/my-image")
+
+                        /* Push the container to the custom Registry */
+                        customImage.push()
+                    }
+                }
+                      //bat 'docker build -f Dockerfile -t final-project .'
                       }
                       }
                           }
