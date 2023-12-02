@@ -5,10 +5,9 @@ pipeline {
         stage('Build') {
             steps {
 
-                git 'https://github.com/nenad0711/final-project-sof-int.git'
+                git 'https://github.com/nenad0711/CI_CD-Final-Project.git'
                 bat "mvn clean package"
             }
             }
-
     }
 }
