@@ -8,20 +8,24 @@ pipeline{
             }
         }
           stage('Test'){
-                         steps{
-                         bat 'mvn test'
+                 steps{
+                      bat 'mvn test'
                     }
                     post{
                         always{
                             junit '**/target/surefire-reports/TEST-*.xml'
-
                         }
                     }
                       }
-                    stage('Install'){
-                                     steps{
-                                     bat 'mvn clean install'
-                                }
-                                      }
-    }
-}
+          stage('Install'){
+                 steps{
+                      bat 'mvn clean install'
+                        }
+                         }
+          stage('Build Docker Image'){
+                steps{
+                      bat 'docker build -f Dockerfile -t final-project .'
+                      }
+                      }
+                          }
+                           }
