@@ -1,6 +1,6 @@
 pipeline{
     agent any
-    tools {docker 'Docker'}
+    tools {dockerTool 'dockerTool'}
     stages{
         stage("Build Maven"){
             steps{
