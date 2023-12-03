@@ -26,7 +26,7 @@ pipeline{
           stage('Build Docker Image'){
                 steps{
                 script{
-                      bat 'docker build -f Dockerfile -t nenad0711/final-project .'
+                      bat 'docker build -t nenad0711/final-project .'
                       }
                       }
                       }
