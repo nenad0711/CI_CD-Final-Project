@@ -27,7 +27,6 @@ pipeline{
                 steps{
                 script{
                       bat 'docker build -t final-project .'
-                      bat 'docker run -d -p 3003:3003 final-project'
                       }
                       }
                       }
