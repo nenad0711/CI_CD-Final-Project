@@ -1,5 +1,4 @@
-FROM eclipse-temurin:17-jdk-jammy
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
+FROM eclipse-temurin:17-jdk
+ADD target/final-software-project.jar final-software-project.jar
 EXPOSE 3003
 ENTRYPOINT ["java","-jar", "final-software-project.jar"]
