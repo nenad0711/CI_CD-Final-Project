@@ -16,6 +16,6 @@ class ControllerTest {
     void testMsgEndpoint() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.content().string("WELCOME NENAD"));
+                .andExpect(MockMvcResultMatchers.content().string("hello"));
     }
 }
