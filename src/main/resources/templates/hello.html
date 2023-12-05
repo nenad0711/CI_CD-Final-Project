@@ -1,11 +1,77 @@
-<!-- hello.html -->
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hello World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sci-Fi Page</title>
+  <!-- Add sci-fi styling and fonts here -->
+  <style>
+    body {
+      background-color: #586d80;
+      color: #fff;
+      font-family: 'Helvetica', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      background-color: #001f3f; /* Dark blue header background */
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #c9ced2;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 20px;
+      font-size: 2em;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    #header {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .header1{
+      background-image: url('https://technology.amis.nl/wp-content/uploads/2020/09/jenkins-pipeline-scaled-1.png');
+      background-size:auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 500px;
+    }
+    #header h1 {
+      font-size: 3em;
+      color: #00ff00; /* Green text color */
+      text-shadow: 0 0 10px #00ff00; /* Green text shadow */
+    }
+    #header h2,h3{
+      font-size: 2em;
+      color: #00ff00; /* Green text color */
+      text-shadow: 0 0 10px #00ff00; /* Green text shadow */
+    }
+
+  </style>
 </head>
+
 <body>
-<h1 th:text="${message}"></h1>
+<header>
+  <h1>CEN-4802C</h1>
+</header>
+
+<div id="header">
+  <h1>Welcome to the Software Development</h1>
+  <h2>Nenad Jovanovic</h2>
+  <h2>Final Project</h2>
+</div>
+
+<div class="header1">
+  <h1>
+
+
+  </h1>
+</div>
+
 </body>
 </html>
