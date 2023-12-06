@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 public class MyController {
     @GetMapping("/")
     public String getIndex() {
+
         return "hello";
     }
 }
