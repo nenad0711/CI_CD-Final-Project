@@ -27,8 +27,8 @@ pipeline{
           stage('Build Docker Image'){
                 steps{
                 script{
-                      bat 'docker build -f Dockerfile -t CEN4802C-Final .'
-                      bat 'docker run -dp 3003:3003 CEN4802C-Final'
+                      bat 'docker build -f Dockerfile -t cen4802c-final .'
+                      bat 'docker run -dp 3003:3003 cen4802c-final'
                       //open localhost:3003
                       //docker tag CEN4802C-Final nenad0711/CEN4802C-Final
                       //docker push nenad0711/CEN4802C-Final
